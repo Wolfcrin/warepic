@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/entities/unit.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/Mapa.gd" type="Script" id=2]
+[ext_resource path="res://scripts/btnUnits.gd" type="Script" id=3]
+
+[node name="Mapa" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Unidad" parent="." instance=ExtResource( 1 )]
+visible = false
+position = Vector2( 102.139, 282.43 )
+scale = Vector2( 2, 2 )
+
+[node name="crearGoblin" type="Button" parent="."]
+margin_left = 56.0
+margin_top = 440.0
+margin_right = 159.0
+margin_bottom = 474.0
+text = "Goblin"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+unidad = "goblin"
+
+[node name="crearPerro" type="Button" parent="."]
+margin_left = 233.895
+margin_top = 440.0
+margin_right = 336.895
+margin_bottom = 474.0
+text = "Demon Boss"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+unidad = "demonBoss"
+[connection signal="pressed" from="crearGoblin" to="crearGoblin" method="_on_crearUnidad_pressed"]
+[connection signal="pressed" from="crearPerro" to="crearPerro" method="_on_crearUnidad_pressed"]

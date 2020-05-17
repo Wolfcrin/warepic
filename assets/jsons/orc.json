@@ -1,0 +1,21 @@
+{
+	"idUnit":"u01",
+	"genericUnit": true,
+	"sizeUnit": "small",	
+	"name": "Orco Pestoso",
+	"attack": 1,
+	"def":2,
+	"life":3,
+	"textureIdle": "",
+	"textureIdleAnimPlayer":"",
+	"AbilitiesActive":{
+		"0":{
+			"idAby": "a01",
+			"name":"Flecha Pestosa",
+			"params":{
+				"damage": 1
+			}
+		}
+	}
+
+}
